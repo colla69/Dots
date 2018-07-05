@@ -1,7 +1,7 @@
 pcname=$(uname -n)
-home=$(echo cola-desktop)
+desktop="cola-Desktop"
 
-if [ "$pcname"=="$home" ]
+if [ "$pcname" = "cola-Desktop" ]
 then
 	echo "Desktop"
 else
