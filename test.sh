@@ -11,6 +11,4 @@ then
 	echo "Desktop"
 else
 	echo "nope"
-	echo $pcname
-	echo $desktop
 fi
