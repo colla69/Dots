@@ -203,6 +203,8 @@ assign [class="HipChat"] → 10 
 #autostart
 	exec --no-startup-id compton --config compton.conf -b
 
+#Color Settings
+
 client.focused          #6528A3 #6528A3 #FFFFFF #6528A3   #6528A3
 client.focused_inactive #6528A3 #6528A3 #FFFFFF #6528A3   #5F676A
 client.unfocused        #333333 #222222 #888888 #292D2E   #222222
