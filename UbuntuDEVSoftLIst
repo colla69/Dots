@@ -6,6 +6,8 @@ i3-wm i3status
 snapd confd-editor
 fonts-font-awesome
 
+# hub ?
+
 sudo snap install intellij-idea-community --classic --edge
 sudo snap install datagrip --classic --edge
 sudo snap install pycharm-professional --classic --edge
