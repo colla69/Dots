@@ -6,6 +6,8 @@ i3-wm i3status
 snapd confd-editor
 fonts-font-awesome
 
+sudo apt install gnupg2 pass
+
 # hub ?
 
 sudo snap install intellij-idea-community --classic --edge
