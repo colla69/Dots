@@ -5,7 +5,7 @@ end
 
 
 function mmc 
-	mc -u
+	mc -u $argv
 end
 
 function fishBkpCnf
@@ -16,7 +16,7 @@ function fishSave
 	fishBkpCnf
 	cd ~/sandbox/Dots/
 	git add *
-	sudo git commit -m fishCnfUpdate
+	git commit -m fishCnfUpdate
 	git push origin master
 end
 
