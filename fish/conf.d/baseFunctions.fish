@@ -17,7 +17,7 @@ function fishSave
 	cd ~/sandbox/Dots/
 	git add *
 	git commit -m fishCnfUpdate
-	git push origin master
+	git push ssh://git@github.com/colla69/Dots.git
 end
 
 function sandbox
