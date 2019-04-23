@@ -16,7 +16,7 @@ function sandbox
 end
 
 function fishFunctions
-	cd  ~/.config/fish/functions/
+	vim ~/.config/fish/conf.d/baseFunctions.fish 
 end
 
 function fishConf
