@@ -3,10 +3,6 @@ function goHome
 	cd ~
 end
 
-function mc 
-	mc -u
-end
-
 function fishBkpCnf
 	cp -r ~/.config/fish/* ~/sandbox/Dots/fish
 end
