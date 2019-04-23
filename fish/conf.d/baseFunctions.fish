@@ -3,12 +3,21 @@ function goHome
 	cd ~
 end
 
-function mc 
+
+function mmc 
 	mc -u
 end
 
 function fishBkpCnf
 	cp -r ~/.config/fish/* ~/sandbox/Dots/fish
+end
+
+function fishSave
+	fishBkpCnf
+	cd ~/sandbox/Dots/
+	git add *
+	sudo git commit -m fishCnfUpdate
+	git push origin master
 end
 
 function sandbox
@@ -25,6 +34,10 @@ end
 
 function remycroft
 	mycroft-start all restart
+end
+
+function dots 
+	cd ~/sandbox/Dots/
 end
 
 function uni 

@@ -2,7 +2,7 @@
 #set -e TMUX
 export LC_ALL="en_US.UTF-8"
 
-tmux
+#tmux
 
 function la
 	ls -la $argv
