@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install -y fish git curl fish build-essential ubuntu-restricted-extras chromium-browser i3-wm i3status dconf-editor snapd \
+sudo apt install -y fish git git-lfs curl fish build-essential ubuntu-restricted-extras chromium-browser i3-wm i3status dconf-editor snapd \
     fonts-font-awesome rofi nautilus okular mc vim apt-transport-https ca-certificates curl software-properties-common &&
 
 # flatpak

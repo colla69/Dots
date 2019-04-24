@@ -12,7 +12,7 @@ function uniPush
 	cd -~/sandbox/UniRepo/
 	git add *
 	git commit -m $argv
-	git push ssh://git@github.com/colla69/Dots.git
+	git push ssh://git@github.com/colla69/UniRepo.git
 end
 
 function uniInfo
