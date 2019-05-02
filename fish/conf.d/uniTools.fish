@@ -11,7 +11,7 @@ end
 function uniPush 
 	cd -~/sandbox/UniRepo/
 	git add *
-	git cosmmit -m $argv
+	git commit -m $argv
 	git push ssh://git@github.com/colla69/UniRepo.git
 end
 
