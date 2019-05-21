@@ -1,5 +1,5 @@
 function dcup
 
-  docker-compose up
+  docker-compose up -d
 
 end

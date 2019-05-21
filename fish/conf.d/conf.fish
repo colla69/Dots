@@ -4,7 +4,7 @@ function sandbox
 end
 
 function uni 
-	cd ~/sandbox/UniRepo/
+	cd ~/Nextcloud/UniRepo/
 end
 
 function la
