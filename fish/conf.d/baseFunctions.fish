@@ -16,7 +16,7 @@ function fishSave
 	cd ~/sandbox/Dots/
 	sudo git add .
 	sudo git commit -m $argv
-	sudo git push ssh://git@github.com/colla69/Dots.git
+	git push ssh://git@github.com/colla69/Dots.git
 end
 
 function sandbox
