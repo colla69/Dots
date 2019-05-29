@@ -14,9 +14,9 @@ end
 function fishSave
 	fishBkpCnf
 	cd ~/sandbox/Dots/
-	git add *
-	git commit -m $argv
-	git push ssh://git@github.com/colla69/Dots.git
+	sudo git add .
+	sudo git commit -m $argv
+	sudo git push ssh://git@github.com/colla69/Dots.git
 end
 
 function sandbox
