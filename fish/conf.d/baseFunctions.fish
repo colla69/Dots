@@ -33,7 +33,8 @@ function fishConf
 end
 
 function remycroft
-	mycroft-start all restart
+	mycroft-stop	
+	mycroft-start all 
 end
 
 function dots 
