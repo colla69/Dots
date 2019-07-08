@@ -1,4 +1,4 @@
-function dcdown
+function ddown
 
   docker-compose down
 
