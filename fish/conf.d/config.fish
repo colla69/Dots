@@ -4,11 +4,11 @@ export LC_ALL="en_US.UTF-8"
 # export PATH="/home/cola/anaconda3/bin:$PATH"
 
 function la
-	ls -la $argv
+	ls -lah $argv
 end
 
 function ll
-	ls -l $argv
+	ls -lh $argv
 end
 
 

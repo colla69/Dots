@@ -32,10 +32,6 @@ function fishConf
 	vim ~/.config/fish/conf.d/config.fish
 end
 
-function remycroft	
-	~/mycroft-core/stop-mycroft.sh ; and ~/mycroft-core/start-mycroft.sh all 
-end
-
 function dots 
 	cd ~/sandbox/Dots/
 end
