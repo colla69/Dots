@@ -1,5 +1,5 @@
 
-function myc-start
+function myc-cli
 	~/mycroft-core/start-mycroft.sh cli 
 end
 
@@ -12,6 +12,8 @@ function myc-stop
 end
 
 function myc-restart
-	~/mycroft-core/start-mycroft.sh restart all 
+	~/mycroft-core/stop-mycroft.sh 
+	~/mycroft-core/start-mycroft.sh all 
 end
+
 
