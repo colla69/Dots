@@ -66,7 +66,7 @@ smart_borders on
 
 #shortcuts
 ####
-  # bindsym $mod+e exec --no-startup-id caja --no-desktop --browser ~
+  bindsym $mod+Shift+e exec --no-startup-id nemo
   bindsym $ctrl+Shift+Escape exec --no-startup-id ksysguard
   # bindsym $mod+End exec --no-startup-id mate-screenshot -a	  
 ####
@@ -98,8 +98,8 @@ client.background       #FFFFFF
 ##############################
 
 bar{
-	tray_output none
-	mode invisible	
+	tray_output hide
+	mode invisible
 }
 
 # switch to workspace

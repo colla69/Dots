@@ -1,7 +1,16 @@
 #!/bin/bash
 
-sudo apt install -y fish git git-lfs curl fish build-essential ubuntu-restricted-extras chromium-browser i3-wm i3status dconf-editor snapd \
-    fonts-font-awesome rofi nautilus okular mc vim apt-transport-https ca-certificates curl software-properties-common sshpass python3 python-setuptools python-venv pygobject libtool libffi libjpg openssl autoconf bison swig glib2.0 portaudio19 mpg123 flac curl fann g++ jq &&
+sudo apt install -y fish git git-lfs curl fish build-essential nemo \
+	ubuntu-restricted-extras chromium-browser i3-wm i3status dconf-editor \
+    fonts-font-awesome rofi okular mc vim apt-transport-https ca-certificates \
+	curl software-properties-common sshpass \
+    snapd python3 python-setuptools python-venv pygobject libtool\
+    libffi libjpg openssl autoconf bison swig glib2.0 portaudio19 mpg123 flac curl fann g++ jq &&
+
+
+## oh my fish install 
+curl -L https://get.oh-my.fish | fish
+
 
 # flatpak
 # sudo add-apt-repository ppa:alexlarsson/flatpak &&
