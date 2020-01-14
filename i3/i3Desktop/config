@@ -85,7 +85,7 @@ smart_borders on
 
 #COLORS
 # class                 border  bground text    indicator child_border
-client.focused          #2D9C46 #2D9C46 #FFFFFF #2D9C46   #2D9C46
+client.focused          #15539E #15539E #FFFFFF #15539E   #15539E
 client.focused_inactive #1C602B #1C602B #FFFFFF #222222   #222222
 client.unfocused        #222222 #222222 #BBBBBB #222222   #222222
 client.urgent           #E50000 #E50000 #FFFFFF #E50000   #E50000
