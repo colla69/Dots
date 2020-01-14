@@ -1,0 +1,188 @@
+set $mod Mod1
+set $ctrl Control
+
+set $ws1 "1 "
+set $ws2 "2 "
+set $ws3 "3 "
+set $ws4 "4 "
+set $ws5 "5 "
+set $ws6 "6 "
+set $ws7 "7 "
+set $ws8 "8 "
+set $ws9 "9 "
+set $ws10 "10 "
+
+font pango:monospace 8
+floating_modifier $mod
+new_window pixel 3
+new_float pixel 3
+gaps inner 4
+gaps outer -1
+
+
+#window bindings
+####
+    assign [class="Google-chrome"] → $ws10
+    assign [class="Thunderbird"] → $ws1
+	assign [class="whats-app-nativefier-d52542"] → $ws2
+	assign [class="Skype"] → $ws2	
+	assign [class="mycroft-gui-app"] → $ws3
+
+	for_window [class="Xfce4-notifyd"] floating enable
+	for_window [class="Xfce4-about"] floating enable
+	for_window [class="Xfce4-appfinder"] floating enable
+####
+
+##CONTROLS
+
+#standard usability
+####
+	bindsym $mod+h split h
+	bindsym $mod+v split v
+	bindsym $mod+Shift+q kill
+	bindsym $mod+Return exec --no-startup-id konsole
+	bindsym $mod+d exec --no-startup-id rofi -show run -lines 7 -eh 2 -width 50
+	bindsym $mod+s layout stacking
+	bindsym $mod+w layout tabbed
+	bindsym $mod+e layout toggle split
+	bindsym $mod+f fullscreen toggle
+	
+	#bindsym $mod+Shift+space floating toggle
+
+	bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10% 
+	bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10% 
+	bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
+
+	bindsym $mod+Shift+c reload
+	bindsym $mod+Shift+r restart
+####
+
+#mouse
+####
+	bindsym --whole-window $mod+button3 kill
+	bindsym --whole-window $mod+button2 floating toggle
+####
+
+#shortcuts
+####
+  # bindsym $mod+e exec --no-startup-id caja --no-desktop --browser ~
+  bindsym $ctrl+Shift+Escape exec --no-startup-id ksysguard
+  # bindsym $mod+End exec --no-startup-id mate-screenshot -a	  
+####
+
+#workspaces
+####
+	bindsym $mod+Shift+Tab move workspace to output left
+	#bindsym $mod+Shift+Ctrl+Right move workspace to output right # -.-' 
+####
+
+#display
+####
+	bindsym $mod+$ctrl+t exec xrandr --output DVI-I-2 --mode 1920x1080 --output DVI-I-3 --mode 1920x1080  --right-of DVI-I-2 --output HDMI-0 --off 
+	bindsym $mod+$ctrl+p exec xrandr --output DVI-I-2 --mode 1920x1080 --output  DVI-I-3 --off --output HDMI-0 --mode 1920x1080	
+####	
+
+#COLORS
+# class                 border  bground text    indicator child_border
+client.focused          #2D9C46 #2D9C46 #FFFFFF #2D9C46   #2D9C46
+client.focused_inactive #1C602B #1C602B #FFFFFF #222222   #222222
+client.unfocused        #222222 #222222 #BBBBBB #222222   #222222
+client.urgent           #E50000 #E50000 #FFFFFF #E50000   #E50000
+client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
+client.background       #FFFFFF
+
+
+##############################
+####  DEFAULT CONFIG  ########
+##############################
+
+bar{
+	tray_output none
+	mode invisible	
+}
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+odiaeresis focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+odiaeresis move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# change focus between tiling / floating windows
+# bindsym $mod+space focus mode_toggle
+# focus the parent container
+# bindsym $mod+a focus parent
+# focus the child container
+# bindsym $mod+d focus child
+# exit i3 (logs you out of your X session)
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'mate-session-save --logout'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+    # These bindings trigger as soon as you enter the resize mode
+
+    # Pressing left will shrink the window’s width.
+    # Pressing right will grow the window’s width.
+    # Pressing up will shrink the window’s height.
+    # Pressing down will grow the window’s height.
+    bindsym j resize shrink width 10 px or 10 ppt
+    bindsym k resize grow height 10 px or 10 ppt
+    bindsym l resize shrink height 10 px or 10 ppt
+    bindsym odiaeresis resize grow width 10 px or 10 ppt
+
+    # same bindings, but for the arrow keys
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    # back to normal: Enter or Escapebindsym Xf86AudioPlay exec playerctl play-pause
+	bindsym Xf86AudioPause exec playerctl play-pause
+	bindsym Xf86AudioNext exec playerctl next
+	bindsym Xf86AudioPrev exec playerctl previous
+	bindsym Xf86MonBrightnessUp exec xbacklight -inc 10
+	bindsym Xf86MonBrightnessDown exec xbacklight -dec 10
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+} bindsym $mod+r mode "resize"
