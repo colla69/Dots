@@ -1,1 +1,1 @@
-/home/cola/.local/share/omf/themes/bira/fish_prompt.fish
+/home/act/.local/share/omf/themes/bira/fish_prompt.fish

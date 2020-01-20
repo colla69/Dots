@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cp /home/cola/sandbox/Dots/i3/i3Desktop/config ~/.config/i3/ 
+cp ~/sandbox/Dots/i3/i3Desktop/config ~/.config/i3/ 
 
 i3-msg restart
