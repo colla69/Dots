@@ -1,8 +1,8 @@
 set $mod Mod4
 set $ctrl Control
 
-set $ws1 "1 "
-set $ws2 "2 "
+set $ws1 "1 "
+set $ws2 "2 "
 set $ws3 "3 "
 set $ws4 "4 "
 set $ws5 "5 "
@@ -10,7 +10,7 @@ set $ws6 "6 "
 set $ws7 "7 "
 set $ws8 "8 "
 set $ws9 "9 "
-set $ws10 "10 "
+set $ws10 "10 "
 
 font pango:monospace 8
 floating_modifier $mod
@@ -23,11 +23,11 @@ smart_borders on
 
 #window bindings
 ####
-    assign [class="Google-chrome"] → $ws10
-    assign [class="Thunderbird"] → $ws1
-	assign [class="whats-app-nativefier-d52542"] → $ws2
-	assign [class="Skype"] → $ws2	
-	assign [class="mycroft-gui-app"] → $ws3
+    assign [class="Google-chrome"] → $ws1
+    # assign [class="Thunderbird"] → $ws1
+	assign [class="whats-app-nativefier-d52542"] → $ws10
+	assign [class="Skype"] → $ws10
+	# assign [class="mycroft-gui-app"] → $ws3
 
 	for_window [class="Xfce4-notifyd"] floating enable
 	for_window [class="Xfce4-about"] floating enable
@@ -41,7 +41,7 @@ smart_borders on
 	bindsym $mod+h split h
 	bindsym $mod+v split v
 	bindsym $mod+Shift+q kill
-	bindsym $mod+Return exec --no-startup-id konsole
+	bindsym $mod+Return exec --no-startup-id xfce4-terminal
 	bindsym $mod+d exec --no-startup-id rofi -show run -lines 7 -eh 2 -width 50
 	bindsym $mod+s layout stacking
 	bindsym $mod+w layout tabbed
@@ -72,18 +72,28 @@ smart_borders on
   bindsym $mod+Shift+e exec --no-startup-id nemo
   bindsym $ctrl+Shift+Escape exec --no-startup-id ksysguard
   # bindsym $mod+End exec --no-startup-id mate-screenshot -a	  
-####
+####konko
 
 #workspaces
 ####
+<<<<<<< HEAD
 	bindsym $mod+Shift+Tab move workspace to output left
 	# bindsym $mod+Shift+Ctrl+Right move workspace to output right # -.-' 
+=======
+	bindsym $mod+$ctrl+Left move workspace to output left
+	bindsym $mod+$ctrl+Right move workspace to output right
+>>>>>>> cd23fff4df884d8b0e74c5cb67c16da03cc7d056
 ####
 
 #display
 ####
+<<<<<<< HEAD
 	# bindsym $mod+$ctrl+t exec xrandr --output DVI-I-2 --mode 1920x1080 --output DVI-I-3 --mode 1920x1080  --right-of DVI-I-2 --output HDMI-0 --off 
 	# bindsym $mod+$ctrl+p exec xrandr --output DVI-I-2 --mode 1920x1080 --output  DVI-I-3 --off --output HDMI-0 --mode 1920x1080	
+=======
+	#bindsym $mod+$ctrl+t exec xrandr --output DVI-I-2 --mode 1920x1080 --output DVI-I-3 --mode 1920x1080  --right-of DVI-I-2 --output HDMI-0 --off 
+	#bindsym $mod+$ctrl+p exec xrandr --output DVI-I-2 --mode 1920x1080 --output  DVI-I-3 --off --output HDMI-0 --mode 1920x1080	
+>>>>>>> cd23fff4df884d8b0e74c5cb67c16da03cc7d056
 ####	
 
 #COLORS
