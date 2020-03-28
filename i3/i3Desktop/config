@@ -56,6 +56,9 @@ smart_borders on
 
 	bindsym $mod+Shift+c reload
 	bindsym $mod+Shift+r restart
+
+	bindsym $mod+Shift+Ctrl+9 exec --no-startup-id setxkbmap de -option altwin:swap_lalt_lwin  
+	bindsym $mod+Shift+Ctrl+0 exec --no-startup-id setxkbmap de neo -option altwin:swap_lalt_lwin
 ####
 
 #mouse
@@ -74,13 +77,13 @@ smart_borders on
 #workspaces
 ####
 	bindsym $mod+Shift+Tab move workspace to output left
-	#bindsym $mod+Shift+Ctrl+Right move workspace to output right # -.-' 
+	# bindsym $mod+Shift+Ctrl+Right move workspace to output right # -.-' 
 ####
 
 #display
 ####
-	bindsym $mod+$ctrl+t exec xrandr --output DVI-I-2 --mode 1920x1080 --output DVI-I-3 --mode 1920x1080  --right-of DVI-I-2 --output HDMI-0 --off 
-	bindsym $mod+$ctrl+p exec xrandr --output DVI-I-2 --mode 1920x1080 --output  DVI-I-3 --off --output HDMI-0 --mode 1920x1080	
+	# bindsym $mod+$ctrl+t exec xrandr --output DVI-I-2 --mode 1920x1080 --output DVI-I-3 --mode 1920x1080  --right-of DVI-I-2 --output HDMI-0 --off 
+	# bindsym $mod+$ctrl+p exec xrandr --output DVI-I-2 --mode 1920x1080 --output  DVI-I-3 --off --output HDMI-0 --mode 1920x1080	
 ####	
 
 #COLORS
