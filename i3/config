@@ -1,4 +1,4 @@
-set $mod Mod1
+set $mod Mod4
 set $ctrl Control
 
 set $ws1 "1 "
@@ -16,79 +16,112 @@ font pango:monospace 8
 floating_modifier $mod
 new_window pixel 3
 new_float pixel 3
-gaps inner 5
-gaps outer 0
+gaps inner 4
+gaps outer -1
+smart_gaps on
+smart_borders on
 
-#window bindings
-####
-    assign [class="Google-chrome"] → $ws10
-    assign [class="Thunderbird"] → $ws1
-	assign [class="whats-app-nativefier-d52542"] → $ws2
-	assign [class="Skype"] → $ws2	
-	assign [class="mycroft-gui-app"] → $ws3
+##############################
+####   WINDOW BINDINGS   #####
+##############################
 
-	for_window [class="Xfce4-notifyd"] floating enable
-	for_window [class="Xfce4-about"] floating enable
-	for_window [class="Xfce4-appfinder"] floating enable
-####
+assign [class="Google-chrome"] → $ws10
+assign [class="Thunderbird"] → $ws1
+assign [class="whats-app-nativefier-d52542"] → $ws2
+assign [class="Skype"] → $ws2	
+assign [class="mycroft-gui-app"] → $ws3
 
-##CONTROLS
+for_window [class="Xfce4-notifyd"] floating enable
+for_window [class="Xfce4-about"] floating enable
+for_window [class="Xfce4-appfinder"] floating enable
 
-#standard usability
-####
-	bindsym $mod+h split h
-	bindsym $mod+v split v
-	bindsym $mod+Shift+q kill
-	bindsym $mod+Return exec --no-startup-id konsole
-	bindsym $mod+d exec --no-startup-id rofi -show run -lines 7 -eh 2 -width 50
-	bindsym $mod+s layout stacking
-	bindsym $mod+w layout tabbed
-	bindsym $mod+e layout toggle split
-	bindsym $mod+f fullscreen toggle
+##############################
+#### STANDARSD USABILITY #####
+##############################
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+Shift+q kill
+
+# bindsym $mod+Return exec --no-startup-id xfce4-terminal
+bindsym $mod+Return exec --no-startup-id konsole
+bindsym $mod+d exec --no-startup-id rofi -show run -lines 7 -eh 2 -width 50
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+f fullscreen toggle
 	
-	#bindsym $mod+Shift+space floating toggle
+# bindsym $mod+Shift+space floating toggle
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10% 
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10% 
 
-	bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +10% 
-	bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -10% 
-	bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
 
-	bindsym $mod+Shift+c reload
-	bindsym $mod+Shift+r restart
-####
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
 
-#mouse
-####
-	bindsym --whole-window $mod+button3 kill
-	bindsym --whole-window $mod+button2 floating toggle
-####
+bindsym $mod+Shift+Ctrl+9 exec --no-startup-id setxkbmap de -option altwin:swap_lalt_lwin  
+bindsym $mod+Shift+Ctrl+0 exec --no-startup-id setxkbmap de neo -option altwin:swap_lalt_lwin 3
 
-#shortcuts
-####
-  # bindsym $mod+e exec --no-startup-id caja --no-desktop --browser ~
-  bindsym $ctrl+Shift+Escape exec --no-startup-id ksysguard
-  # bindsym $mod+End exec --no-startup-id mate-screenshot -a	  
-####
+##############################
+####       MOUSE      ########
+##############################
 
-#workspaces
-####
-	bindsym $mod+Shift+Tab move workspace to output left
-	#bindsym $mod+Shift+Ctrl+Right move workspace to output right # -.-' 
-####
+bindsym --whole-window $mod+button3 kill
+bindsym --whole-window $mod+button2 floating toggle
 
-#display
-####
-	bindsym $mod+$ctrl+t exec xrandr --output DVI-I-2 --mode 1920x1080 --output DVI-I-3 --mode 1920x1080  --right-of DVI-I-2 --output HDMI-0 --off 
-	bindsym $mod+$ctrl+p exec xrandr --output DVI-I-2 --mode 1920x1080 --output  DVI-I-3 --off --output HDMI-0 --mode 1920x1080	
-####	
+##############################
+####    SHORTCUTS     ########
+##############################
 
-#COLORS
+bindsym $mod+Shift+e exec --no-startup-id nemo
+bindsym $ctrl+Shift+Escape exec --no-startup-id ksysguard
+# bindsym $mod+End exec --no-startup-id mate-screenshot -a	  
+
+##############################
+####    WORKSPACES    ########
+##############################
+
+bindsym $mod+$ctrl+Left move workspace to output left
+bindsym $mod+$ctrl+Right move workspace to output right
+bindsym $mod+$ctrl+j move workspace to output left
+bindsym $mod+$ctrl+odiaeresis move workspace to output right
+
+##############################
+####     DISPLAYS     ########
+##############################
+
+bindsym $mod+$ctrl+t exec xrandr --output DVI-I-2 --mode 1920x1080 --output DVI-I-3 --mode 1920x1080  --right-of DVI-I-2 --output HDMI-0 --off 
+bindsym $mod+$ctrl+p exec xrandr --output DVI-I-2 --mode 1920x1080 --output  DVI-I-3 --off --output HDMI-0 --mode 1920x1080	
+
+##############################
+####      COLORS      ########
+##############################
+
 # class                 border  bground text    indicator child_border
-client.focused          #2D9C46 #2D9C46 #FFFFFF #2D9C46   #2D9C46
+client.focused          #15539E #15539E #FFFFFF #15539E   #15539E
 client.focused_inactive #1C602B #1C602B #FFFFFF #222222   #222222
 client.unfocused        #222222 #222222 #BBBBBB #222222   #222222
 client.urgent           #E50000 #E50000 #FFFFFF #E50000   #E50000
 client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 client.background       #FFFFFF
+
+##############################
+####        KDE       ########
+##############################
+
+for_window [title="Desktop — Plasma"] kill; floating enable; border none
+for_window [class="plasmashell"] floating enable;
+for_window [class="Plasma"] floating enable; border none
+for_window [title="plasma-desktop"] floating enable; border none
+for_window [title="win7"] floating enable; border none
+for_window [class="krunner"] floating enable; border none
+for_window [class="Kmix"] floating enable; border none
+for_window [class="Klipper"] floating enable; border none
+for_window [class="Plasmoidviewer"] floating enable; border none
+for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
+no_focus [class="plasmashell" window_type="notification"] 
 
 
 ##############################
@@ -96,8 +129,8 @@ client.background       #FFFFFF
 ##############################
 
 bar{
-	tray_output none
-	mode invisible	
+	tray_output hide
+	mode invisible
 }
 
 # switch to workspace
